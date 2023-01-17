@@ -3,7 +3,7 @@ CCE102 Activities &amp; Exercises
 
 ----------[ Topics ]----------
 
-• Buffered Reader
+• Buffered Reader\
 • Try Catch\
 • Parse\
 • Object Oriented\
@@ -13,5 +13,5 @@ CCE102 Activities &amp; Exercises
 
 ----------[ Exercises ]----------
 
-• TicTacToe
+• TicTacToe\
 • \
