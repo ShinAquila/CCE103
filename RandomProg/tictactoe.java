@@ -1,4 +1,4 @@
-package CodePractices;
+package RandomProg;
 
 import java.util.Scanner;
 import java.io.IOException;
