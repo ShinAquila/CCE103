@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class passwordGen {
     public static void main(String[] args) {
-        int length = 6;
+        int length = 8;
     
         // final char[] lowercase = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         // final char[] uppercase = "ABCDEFGJKLMNPRSTUVWXYZ".toCharArray();
