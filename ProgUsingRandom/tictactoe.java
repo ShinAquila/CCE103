@@ -1,4 +1,4 @@
-package RandomProg;
+package ProgUsingRandom;
 
 import java.util.Scanner;
 import java.io.IOException;

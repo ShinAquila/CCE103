@@ -1,4 +1,4 @@
-package RandomProg;
+package ProgUsingRandom;
 
 import java.io.IOException;
 // import java.io.IOException;
