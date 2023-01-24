@@ -21,7 +21,7 @@ public class passGen {
 
         StringBuilder pass1 = new StringBuilder();
         for (int i = 0; i < 8; i++) {
-            randomPick = random.nextInt(all_Avail.length()-1);
+            randomPick = random.nextInt(all_Avail.length());
             pick = all_Avail.charAt(randomPick);
 
             pass1.append(pick);
@@ -37,7 +37,7 @@ public class passGen {
 
             ///--- 2 Numbers ---///
         for (int i = 0; i < 2; i++) {
-            randomPick = random.nextInt(num_Avail.length()-1);
+            randomPick = random.nextInt(num_Avail.length());
             pick = num_Avail.charAt(randomPick);
 
             pass2.append(pick);
@@ -45,7 +45,7 @@ public class passGen {
 
             ///--- 1 UpperCase ---///
         for (int i = 0; i < 1; i++) {
-            randomPick = random.nextInt(upperC_Avail.length()-1);
+            randomPick = random.nextInt(upperC_Avail.length());
             pick = upperC_Avail.charAt(randomPick);
 
             pass2.append(pick);
@@ -53,7 +53,7 @@ public class passGen {
 
             ///--- 5 LowerCase ---///
         for (int i = 0; i < 5; i++) {
-            randomPick = random.nextInt(lowerC_Avail.length()-1);
+            randomPick = random.nextInt(lowerC_Avail.length());
             pick = lowerC_Avail.charAt(randomPick);
 
             pass2.append(pick);
@@ -92,7 +92,7 @@ public class passGen {
         scan.close();
 
         for (int i = 0; i < charAsk; i++) {
-            randomPick = random.nextInt(all_Avail.length()-1);
+            randomPick = random.nextInt(all_Avail.length());
             pick = all_Avail.charAt(randomPick);
 
             pass3.append(pick); 
