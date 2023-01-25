@@ -22,7 +22,7 @@ public class tictactoe {
         Random random = new Random();
         Scanner scan = new Scanner(System.in);
 
-        ///Guide
+        /// Guide
         System.out.println("[!] Tic Tac Toe Table Guide [!]\n");
         System.out.println("\t " + "-".repeat(13));
         System.out.print("\t ");
@@ -35,15 +35,14 @@ public class tictactoe {
             }
         }
         System.out.println("\n[!]" + "=".repeat(25) + "[!]\n");
-        ///End of Guide
+        /// End of Guide
 
-        ///Actual Game
+        /// Actual Game
         System.out.print("Enter Player Name: ");
         personName = scan.nextLine();
 
         do {
-            ///Person Turn
-            winCheck("X");
+            /// Person Turn
             int personLoc = 0;
             do {
                 Thread.sleep(700);
@@ -60,13 +59,15 @@ public class tictactoe {
                 System.out.println();
 
                 actionMade(personLoc, 0);
+                printTable();
+
+                winCheck("X");
+
             } while (askPerson);
 
-            printTable();
-            ///end of person turn
+            /// end of person turn
 
-            winCheck("X");
-            ///computer turn
+            /// computer turn
             if (!personWin) {
                 System.out.println("\n[C] Computer's Turn (O)");
                 Thread.sleep(500);
@@ -74,25 +75,24 @@ public class tictactoe {
                 Thread.sleep(1000);
                 for (int i = 0; i < 3; i++) {
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(600);
                 }
-                
+
                 int compLoc = 0;
                 do {
-                    do {
-                        compLoc = random.nextInt(9);
-                    } while (compLoc == 0);
+                    compLoc = random.nextInt(10) + 1;
                     actionMade(compLoc, 1);
                 } while (askPerson);
-                
+
                 System.out.println("\nComputer picked: " + compLoc);
                 Thread.sleep(700);
                 System.out.println();
-                
+
                 printTable();
+                winCheck("O");
             }
-            winCheck("O");
-            ///end of computer turn
+
+            /// end of computer turn
         } while (gameContinues);
 
         scan.close();
@@ -238,38 +238,43 @@ public class tictactoe {
     }
 
     public static void winCheck(String piece) {
-        if (
-            table[0][0].equals(piece) && table[0][1].equals(piece) && table[0][2].equals(piece) ||
-            table[1][0].equals(piece) && table[1][1].equals(piece) && table[1][2].equals(piece) ||
-            table[2][0].equals(piece) && table[2][1].equals(piece) && table[2][2].equals(piece) ||
-            table[0][0].equals(piece) && table[1][1].equals(piece) && table[2][2].equals(piece) ||
-            table[0][2].equals(piece) && table[1][1].equals(piece) && table[2][0].equals(piece) ||
-            table[0][0].equals(piece) && table[1][0].equals(piece) && table[2][0].equals(piece) ||
-            table[0][1].equals(piece) && table[1][1].equals(piece) && table[2][1].equals(piece) ||
-            table[0][2].equals(piece) && table[1][2].equals(piece) && table[2][2].equals(piece) && 
-            pieceCount != 9) {
+        if (table[0][0].equals(piece) && table[0][1].equals(piece) && table[0][2].equals(piece) ||
+                table[1][0].equals(piece) && table[1][1].equals(piece) && table[1][2].equals(piece) ||
+                table[2][0].equals(piece) && table[2][1].equals(piece) && table[2][2].equals(piece) ||
+                table[0][0].equals(piece) && table[1][1].equals(piece) && table[2][2].equals(piece) ||
+                table[0][2].equals(piece) && table[1][1].equals(piece) && table[2][0].equals(piece) ||
+                table[0][0].equals(piece) && table[1][0].equals(piece) && table[2][0].equals(piece) ||
+                table[0][1].equals(piece) && table[1][1].equals(piece) && table[2][1].equals(piece) ||
+                table[0][2].equals(piece) && table[1][2].equals(piece) && table[2][2].equals(piece) &&
+                        pieceCount != 9) {
             gameContinues = false;
 
             if (piece.equals("X")) {
                 System.out.println(personName + " Wins!");
-                System.exit(0);
+                askPerson = false;
+                personWin = true;
+                gameContinues = false;
+
             } else if (piece.equals("O")) {
                 System.out.println("Computer Wins!");
-                System.exit(0);
+                askPerson = false;
+                personWin = true;
+                gameContinues = false;
             }
 
-        } else if (
-            !table[0][0].isEmpty() && !table[0][1].isEmpty() && !table[0][2].isEmpty() &&
-            !table[1][0].isEmpty() && !table[1][1].isEmpty() && !table[1][2].isEmpty() &&
-            !table[2][0].isEmpty() && !table[2][1].isEmpty() && !table[2][2].isEmpty() &&
-            !table[0][0].isEmpty() && !table[1][1].isEmpty() && !table[2][2].isEmpty() &&
-            !table[0][2].isEmpty() && !table[1][1].isEmpty() && !table[2][0].isEmpty() &&
-            !table[0][0].isEmpty() && !table[1][0].isEmpty() && !table[2][0].isEmpty() &&
-            !table[0][1].isEmpty() && !table[1][1].isEmpty() && !table[2][1].isEmpty() &&
-            !table[0][2].isEmpty() && !table[1][2].isEmpty() && !table[2][2].isEmpty() && 
-            pieceCount == 9) {
+        } else if (!table[0][0].isEmpty() && !table[0][1].isEmpty() && !table[0][2].isEmpty() &&
+                !table[1][0].isEmpty() && !table[1][1].isEmpty() && !table[1][2].isEmpty() &&
+                !table[2][0].isEmpty() && !table[2][1].isEmpty() && !table[2][2].isEmpty() &&
+                !table[0][0].isEmpty() && !table[1][1].isEmpty() && !table[2][2].isEmpty() &&
+                !table[0][2].isEmpty() && !table[1][1].isEmpty() && !table[2][0].isEmpty() &&
+                !table[0][0].isEmpty() && !table[1][0].isEmpty() && !table[2][0].isEmpty() &&
+                !table[0][1].isEmpty() && !table[1][1].isEmpty() && !table[2][1].isEmpty() &&
+                !table[0][2].isEmpty() && !table[1][2].isEmpty() && !table[2][2].isEmpty() &&
+                pieceCount == 9) {
             System.out.println("Draw");
-            System.exit(0);
+            askPerson = false;
+            personWin = true;
+            gameContinues = false;
         }
     }
 
