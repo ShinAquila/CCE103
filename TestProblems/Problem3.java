@@ -72,7 +72,7 @@ public class Problem3 {
                 }
 
                 if (notDoubletCount < 2) {
-                    doublet.add(word2);
+                    doublet.add(word1);
                 }
 
 
