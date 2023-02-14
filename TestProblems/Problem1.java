@@ -23,7 +23,7 @@ public class Problem1 {
             m = Integer.parseInt(numSplit[0]);
             n = Integer.parseInt(numSplit[1]);
 
-            if (m <= 0 && n <= 0) {
+            if (m > 0 && n > 0) {
                 double outP = Math.pow(m, n);
 
                 String outPtoString = String.valueOf(outP);

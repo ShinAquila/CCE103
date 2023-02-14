@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Problem1",
+            "request": "launch",
+            "mainClass": "TestProblems.Problem1",
+            "projectName": "CCE103_49e4dd28"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tester",
+            "request": "launch",
+            "mainClass": "Tester",
+            "projectName": "CCE103_49e4dd28"
+        }
+    ]
+}
