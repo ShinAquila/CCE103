@@ -30,7 +30,7 @@ public class CountMeInV03 {
                 tempLetter = word.charAt(0);
             }
 
-            if (indexEnd < word.length() - 1) {
+            if (indexEnd < word.length()-1) {
                 tempLetter = word.charAt(indexEnd + 1);
                 indexStart = word.indexOf(tempLetter);
                 indexEnd = word.lastIndexOf(tempLetter);
