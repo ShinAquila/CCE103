@@ -9,9 +9,8 @@ public class Problem3 {
         ArrayList <String> doublet = new ArrayList<String>();
         String dictionaryScan = "a";
         String pairScan = "a";
-        int counter = 0;
 
-        System.out.println("PRESS ENTER AGAIN TO STOP SCANNING\n");
+        System.out.println("PRESS [ENTER] AGAIN AFTER INPUT TO STOP SCANNING\n");
 
         System.out.println("INPUT");
         while (!dictionaryScan.equals("")) {
@@ -19,7 +18,6 @@ public class Problem3 {
                 dictionaryScan = scan.nextLine();
                 dictionary.add(dictionaryScan);
     
-                counter++; 
                 
             }
         }
@@ -50,61 +48,45 @@ public class Problem3 {
                 
             }
         }
-        
 
+        
+        String temp = "";
         int notDoubletCount = 0;
         for (int i = indexFirst; i <= indexSecond; i++) {
-            for (int j = indexFirst; j <= indexSecond; j++) {
-                String word1 = dictionary.get(i);
-                String word2 = dictionary.get(j);
+            int j = indexFirst;
+            String word1 = dictionary.get(i);
+            String word2 = dictionary.get(j);
 
-                char word1Arr[] = word1.toCharArray(); 
-                char word2Arr[] = word2.toCharArray(); 
+            System.out.println(i+" Test: "+word1);
 
-                int k2 = 0;
-                for (int k = 0; k < word1Arr.length; k++) {
+            
+            char word1Arr[] = word1.toCharArray(); 
+            char word2Arr[] = word2.toCharArray(); 
+            
+            for (int wrd1CharNum = 0; wrd1CharNum < word1Arr.length; wrd1CharNum++) {
+                int wrd2CharNum = 0;
+                
 
-                    if (word1Arr[k] != word2Arr[k2]) {
-                        notDoubletCount++;
-                    }
-                    k2++;
-
+                if (word1Arr[wrd1CharNum] != word2Arr[wrd2CharNum]) {
+                    notDoubletCount++;
                 }
-
-                if (notDoubletCount < 2) {
-                    doublet.add(word1);
-                }
-
-
-                // for (int a = 0; a < dictionary.size(); a++) {
-                    
-                //     if (i == 0) {
-                //         if (notDoubletCount < 2) {
-                //             doublet.add(word1);
-                //         }
-                        
-                //     }
-                    
-                //     if (i > 0) {
-                //         String temp = doublet.get(a);
-
-                //         if (notDoubletCount < 2 && (!temp.equals(word1))) {
-                //             doublet.add(word1);
-                //         }
-                        
-                //     }
-
-                    
-                // }
-                notDoubletCount = 0;
+                
             }
+            
+            if (notDoubletCount == 1 && !temp.equals(word1)) {
+                doublet.add(word1);
+            }
+
+            temp = word1;
+            notDoubletCount = 0;
+            
         }
 
 
         
         System.out.println("\nOUTPUT");
         
-        for (int i = 0; i < dictionary.size(); i++) {
+        for (int i = 0; i < doublet.size(); i++) {
             System.out.println(doublet.get(i));
         }
         scan.close();

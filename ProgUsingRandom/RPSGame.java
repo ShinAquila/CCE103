@@ -1,9 +1,8 @@
 package ProgUsingRandom;
 import java.io.IOException;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
-public class RockPaperSci {
+public class RPSGame {
     static int playerScore = 0;
     static int computerScore = 0;
     static boolean contLoop = true;
