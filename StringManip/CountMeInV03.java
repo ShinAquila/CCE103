@@ -9,7 +9,6 @@ public class CountMeInV03 {
         System.out.print("Enter a String: ");
         String wordInput = scan.nextLine();
 
-        wordInput.toLowerCase();
         char wordArray[] = wordInput.toCharArray();
         Arrays.sort(wordArray);
 
@@ -17,7 +16,7 @@ public class CountMeInV03 {
         for (int i = 0; i < wordArray.length; i++) {
             wordTemp.append(wordArray[i]);
         }
-        String word = wordTemp.toString();
+        String word = wordTemp.toString().toLowerCase();
 
         ArrayList<Character> LettersAvail = new ArrayList<>();
         ArrayList<Integer> LettersOccur = new ArrayList<>();

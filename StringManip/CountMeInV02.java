@@ -15,7 +15,6 @@ public class CountMeInV02 {
         System.out.print("Enter a String: ");
         String wordInput = scan.nextLine();
 
-        wordInput.toLowerCase();
         char wordArray[] = wordInput.toCharArray();
         Arrays.sort(wordArray);
 
@@ -23,7 +22,7 @@ public class CountMeInV02 {
         for (int i = 0; i < wordArray.length; i++) {
             wordTemp.append(wordArray[i]);
         }
-        String word = wordTemp.toString();
+        String word = wordTemp.toString().toLowerCase();
 
         for (int i = 0; i < alphabet.length; i++) {
             int counter = 0;
