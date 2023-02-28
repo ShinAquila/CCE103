@@ -9,6 +9,7 @@ public class CountMeInV03 {
         System.out.print("Enter a String: ");
         String wordInput = scan.nextLine();
 
+        wordInput = wordInput.toLowerCase();
         char wordArray[] = wordInput.toCharArray();
         Arrays.sort(wordArray);
 
@@ -16,7 +17,7 @@ public class CountMeInV03 {
         for (int i = 0; i < wordArray.length; i++) {
             wordTemp.append(wordArray[i]);
         }
-        String word = wordTemp.toString().toLowerCase();
+        String word = wordTemp.toString();
 
         ArrayList<Character> LettersAvail = new ArrayList<>();
         ArrayList<Integer> LettersOccur = new ArrayList<>();
@@ -25,12 +26,8 @@ public class CountMeInV03 {
         int indexEnd = 0;
         char tempLetter = ' ';
         for (int i = 0; i < word.length(); i++) {
-            if (indexEnd == 0) {
-                tempLetter = word.charAt(0);
-            }
-
-            if (indexEnd < word.length()-1) {
-                tempLetter = word.charAt(indexEnd + 1);
+            if (indexEnd < word.length() - 1) {
+                tempLetter = word.charAt(indexEnd+1);
                 indexStart = word.indexOf(tempLetter);
                 indexEnd = word.lastIndexOf(tempLetter);
 
@@ -38,7 +35,6 @@ public class CountMeInV03 {
                 LettersOccur.add(tempLength);
                 LettersAvail.add(word.charAt(indexEnd));
             }
-
         }
 
         int largest = 0;
@@ -48,7 +44,6 @@ public class CountMeInV03 {
                 largest = LettersOccur.get(i);
                 indexLargeOccur = LettersOccur.indexOf(largest);
             }
-
         }
 
         System.out.println("\nThe largest occurrence is " + LettersAvail.get(indexLargeOccur));
