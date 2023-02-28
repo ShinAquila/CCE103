@@ -49,7 +49,7 @@ public class CountMeInV02 {
 
         }
 
-        System.out.println("\nThe largest occurence is " + alphabet[indexLargeOccur]);
+        System.out.println("\nThe largest occurrence is " + alphabet[indexLargeOccur]);
         scan.close();
     }
 }

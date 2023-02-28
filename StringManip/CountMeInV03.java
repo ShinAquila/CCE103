@@ -52,7 +52,7 @@ public class CountMeInV03 {
 
         }
 
-        System.out.println("\nThe largest occurence is " + LettersAvail.get(indexLargeOccur));
+        System.out.println("\nThe largest occurrence is " + LettersAvail.get(indexLargeOccur));
 
         scan.close();
     }
