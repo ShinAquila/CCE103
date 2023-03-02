@@ -1,6 +1,4 @@
-// KINAWAT NGA IDEA NI ASNARI UWU
-
-package StringManip;
+package StringManipulation;
 
 import java.util.*;
 

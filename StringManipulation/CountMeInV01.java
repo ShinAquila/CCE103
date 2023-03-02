@@ -1,8 +1,8 @@
-package StringManip;
+package StringManipulation;
 
 import java.util.*;
 
-public class CountMeInV03 {
+public class CountMeInV01 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -19,31 +19,36 @@ public class CountMeInV03 {
         }
         String word = wordTemp.toString();
 
+        ArrayList<Integer> LettersOccurence = new ArrayList<>();
         ArrayList<Character> LettersAvail = new ArrayList<>();
-        ArrayList<Integer> LettersOccur = new ArrayList<>();
 
-        int indexStart = 0;
-        int indexEnd = 0;
-        char tempLetter = ' ';
+        int counterTemp = 0;
         for (int i = 0; i < word.length(); i++) {
-            if (indexEnd < word.length() - 1) {
-                tempLetter = word.charAt(indexEnd+1);
-                indexStart = word.indexOf(tempLetter);
-                indexEnd = word.lastIndexOf(tempLetter);
+            int counter = 0;
 
-                int tempLength = (indexEnd - indexStart) + 1;
-                LettersOccur.add(tempLength);
-                LettersAvail.add(word.charAt(indexEnd));
+            for (int j = 0; j < word.length(); j++) {
+                if (word.charAt(i) == word.charAt(j)) {
+                    counter++;
+                }
+
             }
+
+            if (counterTemp != counter) {
+                LettersOccurence.add(counter);
+                LettersAvail.add(word.charAt(i));
+            }
+
+            counterTemp = counter;
         }
 
         int largest = 0;
         int indexLargeOccur = 0;
-        for (int i = 0; i < LettersOccur.size(); i++) {
-            if (largest < LettersOccur.get(i)) {
-                largest = LettersOccur.get(i);
-                indexLargeOccur = LettersOccur.indexOf(largest);
+        for (int i = 0; i < LettersOccurence.size(); i++) {
+            if (largest < LettersOccurence.get(i)) {
+                largest = LettersOccurence.get(i);
+                indexLargeOccur = LettersOccurence.indexOf(largest);
             }
+
         }
 
         System.out.println("\nThe largest occurrence is " + LettersAvail.get(indexLargeOccur));

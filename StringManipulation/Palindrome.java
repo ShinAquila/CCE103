@@ -1,4 +1,4 @@
-package StringManip;
+package StringManipulation;
 import java.util.*;
 
 public class Palindrome {
