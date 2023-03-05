@@ -5,8 +5,8 @@ public class Exer4Permutation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("[ ! ] To get the Permutation [ ! ]");
-        System.out.println("[ - ] Enter the # of Items separated by a comma then the # of ways it's ordered as demonstrated below [ - ]\n");
+        System.out.println("[!] To get the Permutation [!]");
+        System.out.println("[-] Enter the # of Items separated by a comma then the # of ways it's ordered as demonstrated below [ - ]\n");
         
         
         boolean isError = false;
@@ -38,7 +38,7 @@ public class Exer4Permutation {
                 System.out.println("\n[O] The permutation of "+input+" is: "+permutation);
                 isError = false;
             } catch (Exception e) {
-                System.out.println("<!> The Input is not a number and/or incomplete <!>\n");
+                System.out.println("<!> The Input is not a number or incomplete <!>\n");
                 isError = true;
             }
             

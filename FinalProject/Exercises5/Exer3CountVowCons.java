@@ -10,7 +10,7 @@ public class Exer3CountVowCons {
         
         try {
             System.out.println("-".repeat(12)+ "<[ INPUT ]>" +"-".repeat(12)+"\n");
-            System.out.print("Enter a word: ");
+            System.out.print("[+] Enter a word: ");
             String input = scan.nextLine();
 
             String word = input.toLowerCase();
@@ -31,14 +31,14 @@ public class Exer3CountVowCons {
                 }
             }
 
-            System.out.println("\n"+"-".repeat(12)+ "<[ OUTPUT ]>" +"-".repeat(12));
+            System.out.println("\n"+"-".repeat(12)+ "<[ OUTPUT ]>" +"-".repeat(11));
             if (vowelCount == 0 && consonantCount == 0) {
                 System.out.println("\n[!] The input is not a letter [!]");
             } else {
                 System.out.println("\nVowels: "+vowelCount+" | Consonants: "+consonantCount);
             }
         } catch (Exception e) {
-            System.out.println("An error has occured...");
+            System.out.println("<!> An error has occured...");
         }
         scan.close();
     }

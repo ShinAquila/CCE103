@@ -6,7 +6,7 @@ public class Exer5Palindrome {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("-".repeat(12)+ "<[ INPUT ]>" +"-".repeat(12)+"\n");
-        System.out.print("Enter a word: ");
+        System.out.print("[+] Enter a word: ");
         String wordInput = scan.nextLine();
 
         String word = wordInput.toLowerCase().replaceAll("\\s+", "");
