@@ -8,8 +8,9 @@ public class Exer3CountVowCons {
         char consonantList[] = {'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'};
         char vowelList[] = {'a','e','i','o','u'};
         
+        System.out.println(">[Part 3: Counting Vowel and Consonant Letters]<".indent(10));
         try {
-            System.out.println("-".repeat(12)+ "<[ INPUT ]>" +"-".repeat(12)+"\n");
+            System.out.println("-".repeat(28)+ "<[ INPUT ]>" +"-".repeat(28)+"\n");
             System.out.print("[+] Enter a word: ");
             String input = scan.nextLine();
 
@@ -31,7 +32,7 @@ public class Exer3CountVowCons {
                 }
             }
 
-            System.out.println("\n"+"-".repeat(12)+ "<[ OUTPUT ]>" +"-".repeat(11));
+            System.out.println("\n"+"-".repeat(28)+ "<[ OUTPUT ]>" +"-".repeat(27));
             if (vowelCount == 0 && consonantCount == 0) {
                 System.out.println("\n[!] The input is not a letter [!]");
             } else {

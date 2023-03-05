@@ -5,6 +5,7 @@ public class Exer5Palindrome {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        System.out.println(">[Part 5: Palindrome]<".indent(7));
         System.out.println("-".repeat(12)+ "<[ INPUT ]>" +"-".repeat(12)+"\n");
         System.out.print("[+] Enter a word: ");
         String wordInput = scan.nextLine();

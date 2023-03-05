@@ -39,9 +39,10 @@ public class Exer2MorseCode {
             {"Z","--**"},
         };
 
+        System.out.println(">[Part 2: Morse Code Translator]<".indent(21));
         do {
             System.out.println("Category 0 - Convert texts to morse code");
-            System.out.println("Category 1 - Convert morse code to texts");
+            System.out.println("Category 1 - Convert morse code to texts\n");
 
             System.out.println("-".repeat(32)+ "<[ INPUT ]>" +"-".repeat(32)+"\n");
             System.out.print("[+] Enter the Category: \t");
@@ -65,7 +66,7 @@ public class Exer2MorseCode {
                     }
                 }
 
-                System.out.println("\n"+"-".repeat(12)+ "<[ OUTPUT ]>" +"-".repeat(12));
+                System.out.println("\n"+"-".repeat(32)+ "<[ OUTPUT ]>" +"-".repeat(31));
                 String separator = "";
                 try {
                     for (int i = 0; i < convertedToMorse.length; i++) {
@@ -99,7 +100,7 @@ public class Exer2MorseCode {
                 }
 
                 System.out.println();
-                System.out.println("-".repeat(30)+"OUTPUT"+"-".repeat(30)+"\n");
+                System.out.println("\n"+"-".repeat(32)+ "<[ OUTPUT ]>" +"-".repeat(31));
                 try {
                     for (int i = 0; i < convertedToText.length; i++) {
                         if (!convertedToText[i].equals(null)) {

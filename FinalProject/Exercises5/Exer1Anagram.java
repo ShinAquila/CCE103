@@ -6,11 +6,12 @@ public class Exer1Anagram {
         Scanner scan = new Scanner(System.in);
         String input[] = new String[2];
 
+        System.out.println(">[Part 1: Anagram String]<".indent(7));
         try {
             do {
-                System.out.println("-".repeat(12)+ "<[ INPUT ]>" +"-".repeat(12)+"\n");
+                System.out.println("-".repeat(14)+ "<[ INPUT ]>" +"-".repeat(14)+"\n");
                 for (int i = 0; i < input.length; i++) {
-                    System.out.print("[ "+ (i+1) +" ] Enter any number/word: ");
+                    System.out.print("["+ (i+1) +"] Enter any number/word: ");
                     input[i] = scan.nextLine(); 
                 }
 
@@ -73,7 +74,7 @@ public class Exer1Anagram {
                 }
             }
 
-            System.out.println("-".repeat(12)+ "<[ OUTPUT ]>" +"-".repeat(12));
+            System.out.println("-".repeat(14)+ "<[ OUTPUT ]>" +"-".repeat(14));
             System.out.print("\n[!] "+input[0] + " and " + input[1] + " are ");
             if (isAnagram) {
                 System.out.print("Anagrams <OK>\n");
