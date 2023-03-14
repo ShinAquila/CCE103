@@ -1,13 +1,10 @@
-package ProgUsingRandom;
+package CompiledActivities;
 import java.util.*;
 
 public class RPSGame {
-    static int playerScore = 0;
-    static int computerScore = 0;
-    static boolean contLoop = true;
-    static boolean invalid = true;
-    static String winName = "";
-
+    static int playerScore = 0;     static int computerScore = 0;   static boolean contLoop = true;
+    static boolean invalid = true;  static String winName = "";
+    
     public static void main(String[] args) throws InterruptedException{
         Random random = new Random();
         Scanner scan = new Scanner(System.in);
@@ -101,9 +98,6 @@ public class RPSGame {
         } else if (computerScore==5) {
             contLoop = false;
             winName = "Computer";
-        } else {
         }
     }
-
-    
 }

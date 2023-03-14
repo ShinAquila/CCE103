@@ -1,4 +1,5 @@
 package Exercises5;
+
 import java.util.*;
 
 public class Exer2MorseCode {
@@ -11,32 +12,13 @@ public class Exer2MorseCode {
         String category = "";
 
         String morseCode[][] = {
-            {"A","*-"},
-            {"B","-***"},
-            {"C","-*-*"},
-            {"D","-**"},
-            {"E","*"},
-            {"F","**-*"},
-            {"G","--*"},
-            {"H","****"},
-            {"I","**"},
-            {"J","*---"},
-            {"K","-*-"},
-            {"L","*-**"},
-            {"M","--"},
-            {"N","-*"},
-            {"O","---"},
-            {"P","*--*"},
-            {"Q","--*-"},
-            {"R","*-*"},
-            {"S","***"},
-            {"T","-"},
-            {"U","**-"},
-            {"V","***-"},
-            {"W","*--"},
-            {"X","-**-"},
-            {"Y","-*--"},
-            {"Z","--**"},
+                { "A", "*-" },  { "B", "-***" },    { "C", "-*-*" },    { "D", "-**" },
+                { "E", "*" },   { "F", "**-*" },    { "G", "--*" },     { "H", "****" },
+                { "I", "**" },  { "J", "*---" },    { "K", "-*-" },     { "L", "*-**" },
+                { "M", "--" },  { "N", "-*" },      { "O", "---" },     { "P", "*--*" },
+                { "Q", "--*-" }, { "R", "*-*" },    { "S", "***" },     { "T", "-" },
+                { "U", "**-" }, { "V", "***-" },    { "W", "*--" },     { "X", "-**-" },
+                { "Y", "-*--" }, { "Z", "--**" },
         };
 
         System.out.println(">[Part 2: Morse Code Translator]<".indent(21));
@@ -44,11 +26,11 @@ public class Exer2MorseCode {
             System.out.println("Category 0 - Convert texts to morse code");
             System.out.println("Category 1 - Convert morse code to texts\n");
 
-            System.out.println("-".repeat(32)+ "<[ INPUT ]>" +"-".repeat(32)+"\n");
+            System.out.println("-".repeat(32) + "<[ INPUT ]>" + "-".repeat(32) + "\n");
             System.out.print("[+] Enter the Category: \t");
             category = scanSTRING.nextLine();
 
-            //Category 0 - Texts to Morse Code
+            // Category 0 - Texts to Morse Code
             if (category.equals("0")) {
                 System.out.println("\n[!] You selected the Category 0 - Convert texts to Morse Code");
 
@@ -66,14 +48,14 @@ public class Exer2MorseCode {
                     }
                 }
 
-                System.out.println("\n"+"-".repeat(32)+ "<[ OUTPUT ]>" +"-".repeat(31));
+                System.out.println("\n" + "-".repeat(32) + "<[ OUTPUT ]>" + "-".repeat(31));
                 String separator = "";
                 try {
                     for (int i = 0; i < convertedToMorse.length; i++) {
                         if (!convertedToMorse[i].equals(null)) {
-                            System.out.print(separator+convertedToMorse[i]);
+                            System.out.print(separator + convertedToMorse[i]);
                             separator = "|";
-                        } 
+                        }
                     }
                 } catch (NullPointerException NPex) {
                     System.out.println();
@@ -81,7 +63,7 @@ public class Exer2MorseCode {
                 }
                 System.out.println();
 
-            //Category 1 - Morse Code to Texts
+                // Category 1 - Morse Code to Texts
             } else if (category.equals("1")) {
                 System.out.println("\n[!] You selected the Category 1 - Convert Morse Code to Texts");
 
@@ -100,12 +82,12 @@ public class Exer2MorseCode {
                 }
 
                 System.out.println();
-                System.out.println("\n"+"-".repeat(32)+ "<[ OUTPUT ]>" +"-".repeat(31));
+                System.out.println("\n" + "-".repeat(32) + "<[ OUTPUT ]>" + "-".repeat(31));
                 try {
                     for (int i = 0; i < convertedToText.length; i++) {
                         if (!convertedToText[i].equals(null)) {
                             System.out.print(convertedToText[i]);
-                        } 
+                        }
                     }
                 } catch (NullPointerException NPex) {
                     System.out.println();
@@ -113,8 +95,7 @@ public class Exer2MorseCode {
                 }
                 System.out.println();
 
-
-            } else{
+            } else {
                 System.out.println("<!> Category does not exist");
             }
 
@@ -129,14 +110,14 @@ public class Exer2MorseCode {
                 } else if (doYouContinueString.equalsIgnoreCase("N")) {
                     doYouContinue = false;
                     notValid = false;
-                } else{
+                } else {
                     System.out.println("<!> Not Valid Indicator. Try Again.");
                     notValid = true;
                 }
                 System.out.println();
             } while (notValid);
 
-            System.out.println(" ".repeat(16)+"]"+"-".repeat(41)+"[");
+            System.out.println(" ".repeat(16) + "]" + "-".repeat(41) + "[");
             System.out.println();
 
         } while (doYouContinue);

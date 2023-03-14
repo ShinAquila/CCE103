@@ -2,7 +2,7 @@ package StringManipulation;
 
 import java.util.*;
 
-public class MidName {
+public class SplitName {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
